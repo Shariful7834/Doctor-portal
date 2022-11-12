@@ -1,6 +1,7 @@
 # Doctors Portal
-![It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout  The point of using Lorem Ipsumis that it has a more-or-less normal distribution of letter](https://user-images.githubusercontent.com/37573074/201498520-6c6706da-e0e9-495e-a8d5-66e09f79b809.png)
 
+
+![Home](https://user-images.githubusercontent.com/37573074/201498551-a403b0a6-6add-445e-9410-2787610841ce.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
