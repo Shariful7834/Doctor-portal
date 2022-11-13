@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import appointment from "../../../assets/images/appointment.png";
 import doctor from "../../../assets/images/doctor.png";
 import PrimaryButton from "../../../components/PrimaryButton";
