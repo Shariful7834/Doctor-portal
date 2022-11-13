@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+# Doctors Portal
+
+
+![Home](https://user-images.githubusercontent.com/37573074/201498551-a403b0a6-6add-445e-9410-2787610841ce.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
