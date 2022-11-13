@@ -30,7 +30,7 @@ const ServiceCards = () => {
   ];
 
   return (
-    <div >
+    <div>
       <div className="text-center mt-20 mb-10">
         <h3 className="text-2xl text-primary font-bold">Our Services</h3>
         <h2 className="text-4xl font-bold">Service We provide</h2>

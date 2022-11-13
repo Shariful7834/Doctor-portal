@@ -8,11 +8,7 @@ const ServiceCard = ({ sCard }) => {
     Aos.init({ duration: 2000 });
   }, []);
   return (
-    <div
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      className="card w-96 bg-base-100 shadow-xl"
-    >
+    <div data-aos-easing="fade-up" className="card w-96 bg-base-100 shadow-xl">
       <figure className="px-10 pt-10">
         <img src={icon} alt="icons" className="rounded-xl" />
       </figure>
