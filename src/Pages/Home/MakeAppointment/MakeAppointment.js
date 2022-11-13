@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import appointment from "../../../assets/images/appointment.png";
 import doctor from "../../../assets/images/doctor.png";
 import PrimaryButton from "../../../components/PrimaryButton";
 
 const MakeAppointment = () => {
   return (
-    <div className="hero mt-40" style={{ background: `url(${appointment})` }}>
+    <section
+      data-aos="fade-up"
+      className="hero mt-40"
+      style={{ background: `url(${appointment})` }}
+    >
       <div className="hero-content flex-col lg:flex-row -mb-4">
         <img
           src={doctor}
@@ -28,7 +32,7 @@ const MakeAppointment = () => {
           <PrimaryButton>Appointment</PrimaryButton>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

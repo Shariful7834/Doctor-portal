@@ -1,9 +1,17 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Card = ({ card }) => {
   const { id, icon, description, title, bgClass } = card;
+
+  useEffect(() => {
+    Aos.init({ duration: 5000 });
+  }, []);
   return (
-    <div className={`text-white card p-6 card-side  shadow-xl ${bgClass}`}>
+    <div
+      data-aos="flip-left"
+      className={`text-white card p-6 card-side  shadow-xl ${bgClass}`}
+    >
       <figure>
         <img src={icon} alt="icon" />
       </figure>
