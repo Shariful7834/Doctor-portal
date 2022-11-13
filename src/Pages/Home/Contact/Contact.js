@@ -9,7 +9,7 @@ const Contact = () => {
         <h3 className="text-2xl text-primary">Contact Us</h3>
         <h2 className="text-4xl font-semibold"> Stay connected with us</h2>
       </div>
-      <div className="text-center my-10">
+      <div data-aos="zoom-in-up" className="text-center my-10">
         <input
           type="email"
           placeholder="Email Address"
