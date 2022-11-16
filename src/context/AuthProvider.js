@@ -43,7 +43,7 @@ const AuthProvider = ({ children }) => {
 
   const updateUserProfile = (userInfo) => {
     setLoading(true);
-    return updateProfile(auth, userInfo);
+    return updateProfile(auth.currentUser, userInfo);
   };
 
   useEffect(() => {
