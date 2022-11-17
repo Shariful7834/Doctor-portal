@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
+import DashboardLayout from "../layout/DashboardLayout";
 import Main from "../layout/Main";
 import DeshBoard from "../Pages/DeshBoard/DeshBoard";
+import MyAppointment from "../Pages/DeshBoard/MyAppointment/MyAppointment";
 import Home from "../Pages/Home/Home/Home";
 import Appointment from "../Pages/Home/MakeAppointment/Appointment/Appointment";
 import Login from "../Pages/Login/Login";
@@ -39,8 +41,14 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     element: (
       <PrivateRouter>
-        <DeshBoard></DeshBoard>
+        <DashboardLayout></DashboardLayout>
       </PrivateRouter>
     ),
+    children: [
+      {
+        path: "/dashboard",
+        element: <MyAppointment></MyAppointment>,
+      },
+    ],
   },
 ]);

@@ -33,7 +33,7 @@ const SignUp = () => {
         };
         updateUserProfile(userInfo)
           .then((result) => {
-            const user = result.user;
+            saveUser(data.name, data.email);
           })
           .catch((error) => {
             console.log(error.message);
@@ -56,6 +56,22 @@ const SignUp = () => {
         toast.success("Loged In successfully");
       })
       .catch((error) => console.log(error));
+  };
+
+  const saveUser = (name, email) => {
+    const user = { name, email };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        navigate(from, { replace: true });
+      });
   };
 
   return (
