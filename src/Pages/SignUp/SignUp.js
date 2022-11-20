@@ -4,6 +4,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../../context/AuthProvider";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { toast } from "react-hot-toast";
+import useToken from "../../hooks/useToken";
 
 const SignUp = () => {
   const { createUser, updateUserProfile, googleSignIn } =
@@ -20,6 +21,15 @@ const SignUp = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  // calling jwt token in signup form
+  const [createdUserEmail, setCreatedUserEmail] = useState("");
+  const [token] = useToken(createdUserEmail);
+
+  if (token) {
+    // navigate(from, { replace: true });
+    navigate("/");
+  }
 
   // signup function
   const handleSignUp = (data) => {
@@ -70,7 +80,8 @@ const SignUp = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        navigate(from, { replace: true });
+        setCreatedUserEmail(email);
+        // navigate(from, { replace: true });
       });
   };
 

@@ -4,12 +4,24 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 import { useState } from "react";
 import { toast } from "react-hot-toast";
+import useToken from "../../hooks/useToken";
 const Login = () => {
   const { userLogIn, googleSignIn } = useContext(AuthContext);
   const [signInError, SetSignInError] = useState("");
   let navigate = useNavigate();
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
+
+  // get jwt token from hook for security in login page
+
+  const [loginUserEmail, setLoginUserEmail] = useState("");
+
+  const [token] = useToken(loginUserEmail);
+
+  if (token) {
+    // navigate(from, { replace: true })
+    navigate("/");
+  }
 
   //React hook form
   const {
@@ -28,7 +40,8 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        navigate(from, { replace: true });
+        setLoginUserEmail(data.email);
+        // navigate(from, { replace: true });
         toast.success("Loged In successfully");
       })
       .catch((error) => {
