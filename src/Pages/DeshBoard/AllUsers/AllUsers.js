@@ -30,6 +30,21 @@ const AllUsers = () => {
         }
       });
   };
+
+  // const handleDelete = (id) => {
+  //   fetch(`http://localhost:5000/users/admin/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.deletedCount > 0) {
+  //         toast.success("Deleted user Successfully");
+  //         refetch();
+  //       }
+  //       console.log(data);
+  //     });
+  // };
+
   return (
     <div>
       <h1 className="text-2xl text-center mt-10">all users page</h1>
@@ -60,7 +75,12 @@ const AllUsers = () => {
                 )}
               </td>
               <td>
-                <button className="btn btn-error">Delete</button>
+                <button
+                  // onClick={() => handleDelete(user._id)}
+                  className="btn btn-error"
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
