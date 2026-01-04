@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../../context/AuthProvider";
 import Loading from "../../Shared/Loading/Loading";
 
@@ -16,6 +16,10 @@ const MyAppointment = () => {
         },
       });
       const data = await res.json();
+      // Ensure we always return an array
+      if (!Array.isArray(data)) {
+        return [];
+      }
       return data;
     },
   });

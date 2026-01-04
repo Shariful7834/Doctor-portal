@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from "react";
 const Card = ({ card }) => {
-  const { id, icon, description, title, bgClass } = card;
+  const { icon, description, title, bgClass } = card;
 
   useEffect(() => {
     Aos.init({ duration: 5000 });

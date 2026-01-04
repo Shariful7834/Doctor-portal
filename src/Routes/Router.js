@@ -3,7 +3,6 @@ import DashboardLayout from "../layout/DashboardLayout";
 import Main from "../layout/Main";
 import AddDoctors from "../Pages/DeshBoard/AddDoctors/AddDoctors";
 import AllUsers from "../Pages/DeshBoard/AllUsers/AllUsers";
-import DeshBoard from "../Pages/DeshBoard/DeshBoard";
 import ManageDoctors from "../Pages/DeshBoard/ManageDoctors/ManageDoctors";
 import MyAppointment from "../Pages/DeshBoard/MyAppointment/MyAppointment";
 import Home from "../Pages/Home/Home/Home";

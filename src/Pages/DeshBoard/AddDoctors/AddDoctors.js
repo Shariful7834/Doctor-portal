@@ -1,38 +1,23 @@
 import { useQuery } from "@tanstack/react-query";
-import React, { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../../context/AuthProvider";
-import useToken from "../../../hooks/useToken";
+import { useNavigate } from "react-router-dom";
 
 const AddDoctors = () => {
-  const { createUser, updateUserProfile } = useContext(AuthContext);
-  const [errorSignUp, setErrorSignUp] = useState("");
   const imageHostKey = process.env.REACT_APP_imageHost_Secret;
 
   // for private route authentication
   let navigate = useNavigate();
-  let location = useLocation();
-  let from = location.state?.from?.pathname || "/";
   // react hook form
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  // calling jwt token in signup form
-  const [createdUserEmail, setCreatedUserEmail] = useState("");
-  const [token] = useToken(createdUserEmail);
-
-  if (token) {
-    // navigate(from, { replace: true });
-    navigate("/");
-  }
 
   // get all specialty
 
-  const { data: specialties = [], isLoading } = useQuery({
+  const { data: specialties = [] } = useQuery({
     queryKey: ["specialty"],
     queryFn: async () => {
       const res = await fetch(
@@ -157,15 +142,6 @@ const AddDoctors = () => {
               type="submit"
             />
           </form>
-          {errorSignUp && (
-            <p className="text-red-600 text-semibold">{errorSignUp}</p>
-          )}
-          <p className="mt-3">
-            Already have an account?{" "}
-            <Link to="/login" className="text-secondary">
-              Login
-            </Link>
-          </p>
         </div>
       </div>
     </div>

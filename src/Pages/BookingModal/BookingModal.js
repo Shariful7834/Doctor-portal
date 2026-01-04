@@ -1,8 +1,7 @@
 import { format } from "date-fns/esm";
-import React from "react";
-import { AuthContext } from "../../context/AuthProvider";
 import { useContext } from "react";
 import { toast } from "react-hot-toast";
+import { AuthContext } from "../../context/AuthProvider";
 
 const BookingModal = ({ treatment, selectedDate, setTreatment, refetch }) => {
   const { name: treatmentName, slots } = treatment;

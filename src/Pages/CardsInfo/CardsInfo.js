@@ -1,5 +1,3 @@
-import { primary, secondary } from "daisyui/src/colors";
-import React from "react";
 import clock from "../../assets/icons/clock.svg";
 import marker from "../../assets/icons/marker.svg";
 import phone from "../../assets/icons/phone.svg";

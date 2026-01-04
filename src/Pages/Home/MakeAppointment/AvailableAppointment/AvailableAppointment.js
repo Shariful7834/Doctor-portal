@@ -1,7 +1,6 @@
-import { async } from "@firebase/util";
 import { useQuery } from "@tanstack/react-query";
 import { format } from "date-fns";
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import BookingModal from "../../../BookingModal/BookingModal";
 import Loading from "../../../Shared/Loading/Loading";
 import AvailableOption from "./AvailableOption";

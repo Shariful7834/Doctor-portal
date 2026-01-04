@@ -1,15 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
-import { useContext } from "react";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const handleSignOut = () => {
     logOut()
-      .then((result) => {
-        const user = result.user;
-      })
+      .then(() => {})
       .catch((error) => console.error(error));
   };
 

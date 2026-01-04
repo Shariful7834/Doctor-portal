@@ -1,7 +1,5 @@
-import React from "react";
 import CardsInfo from "../../CardsInfo/CardsInfo";
 import ServiceCards from "../../ServiceCards/ServiceCards";
-import BottomFooter from "../../Shared/Footer/BottomFooter";
 import Banner from "../Banner/Banner";
 import Contact from "../Contact/Contact";
 import HeroContent from "../HeroContent/HeroContent";
